@@ -1,0 +1,43 @@
+.tela-contato {
+  display: flex;
+  border: solid 3px #5ccb5f;
+  border-radius: 30px;
+  margin: 30px 50px !important;
+}
+@media (min-width: 768px) {
+  .tela-contato {
+    margin: 30px 150px !important;
+  }
+}
+
+.formulario {
+  padding: 20px;
+  font-family: "Plus Jakarta Sans";
+}
+
+.button {
+  border: #5ccb5f;
+  background-color: #5ccb5f;
+  border-radius: 30px;
+  height: 40px;
+  width: 100%;
+  transition: all 0.3s;
+}
+.button:hover {
+  background-color: #009929;
+}
+
+.capa {
+  display: none;
+  border: transparent;
+  border-top-right-radius: 27px;
+  border-bottom-right-radius: 27px;
+}
+@media (min-width: 768px) {
+  .capa {
+    display: flex;
+    background-image: url(https://img.freepik.com/fotos-gratis/textura-de-folha-verde-fundo-de-textura-de-folha_501050-120.jpg);
+  }
+}
+
+/*# sourceMappingURL=contato.css.map */
