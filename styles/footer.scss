@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$footer-color:#666264;
+$footer-hover:#5ccb5f;
+$footer-white:#f5f5f5;
+$font-family: 'Plus Jakarta Sans';
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mobile {
+      @media (max-width: 600px) { @content; }
+    } @else if $breakpoint == tablet {
+      @media (min-width: 768px) { @content; }
+    } @else if $breakpoint == desktop {
+      @media (max-width: 1024px) { @content; }
+    }
+  }
+
+footer{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: $footer-color;
+    font-family: $font-family;
+    bottom: 0;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: center;
+    padding: 50px 30px 20px 30px;
+    flex-wrap: wrap;
+    gap: 50px;
+    @include responsive(tablet) {
+        justify-content: space-around;
+        gap: 0;
+      }
+}
+
+.footer_logo{
+    display: flex;
+    img{
+        width: 230px;
+    }
+}
+
+.p-menu {
+    margin: 0;
+    font-size: 20px;
+    color: $footer-white;
+    font-weight: bold;
+}
+
+.footer_links a {
+    text-decoration: none;
+    color: $footer-white;
+    font-size: 17px;
+    transition: all 0.3s;
+    width: fit-content;
+    &:hover{
+        color: $footer-hover;
+        font-weight: bold;
+    }
+}
+
+.social_media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 35px;
+    @include responsive(tablet) {
+        gap: 100px;
+      }
+    a{
+        transition: all 0.5s;
+        &:hover{
+            scale: 1.2;
+        }
+    }
+    i{
+    color: $footer-white;
+    font-size: 23px;
+    &:hover{
+        color: $footer-hover;
+    }
+    }
+}
+.footer_links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+#copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    background-color: #171717;
+    font-size: 0.9rem;
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+  
+
+  

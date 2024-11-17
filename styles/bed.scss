@@ -1,0 +1,81 @@
+$green: #006414;
+$green-light: #76f790;
+$red: #640000;
+$red-light: #f77676;
+$white: whitesmoke;
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mobile {
+      @media (max-width: 600px) { @content; }
+    } @else if $breakpoint == tablet {
+      @media (min-width: 890px) { @content; }
+    } @else if $breakpoint == desktop {
+      @media (min-width: 1358px) { @content; }
+    }
+  }
+
+.bed{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 50px;
+    margin: 45px 20px;
+    @include responsive(tablet){
+        grid-template-columns: 1fr 1fr;
+    }
+    @include responsive(desktop){
+        gap: 0;
+    }
+}
+
+@mixin centralizar {
+    width: 364px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 2px;
+    border-radius: 30px;
+    padding: 20px;
+    margin: 0 25px;
+    font-size: 19px;
+    p{
+        margin: 0;
+    }
+    .alinhamento{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p{
+            margin: 15px 0;
+        }
+        i{
+            font-size: 25px;
+        }
+        h2{
+            width: 100%;
+            text-align: center;
+            font-size: 28px;
+        }
+    }
+    @include responsive(desktop){
+        width: 600px;
+    }
+}
+
+.beneficios{
+    @include centralizar();
+    background-color: $green;
+    color: $white;
+    i{
+        color: $green-light
+    }
+}
+
+.desafios{
+    @include centralizar();
+    background-color: $red;
+    color: $white;
+    i{
+        color: $red-light
+    }
+}
