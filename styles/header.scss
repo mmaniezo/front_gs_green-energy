@@ -1,0 +1,50 @@
+$primary-color: #5ccb5f;
+$font: "Plus Jakarta Sans";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    font-family: $font;
+}
+
+nav {
+	background-color: $primary-color;
+	margin: 0;
+	height: 80px;
+
+	img {
+		height: 60px;
+	}
+
+	.navbar-nav {
+        padding: 10px;
+		gap: 15px;
+
+		.nav-item {
+			position: relative;
+			::after {
+				content: " ";
+				width: 0%;
+				height: 2px;
+				background-color: black;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				transition: 0.4s ease-in-out;
+			}
+
+			&:hover ::after {
+				width: 100%;
+			}
+
+			.nav-link {
+				transition: 0.3s ease-in-out;
+
+				&.active {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
