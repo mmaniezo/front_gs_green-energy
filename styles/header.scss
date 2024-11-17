@@ -1,4 +1,5 @@
 $primary-color: #5ccb5f;
+$primary-color-transparent: #5ccb60c2;
 $font: "Plus Jakarta Sans";
 
 * {
@@ -8,13 +9,63 @@ $font: "Plus Jakarta Sans";
     font-family: $font;
 }
 
-nav {
-	background-color: $primary-color;
-	margin: 0;
-	height: 80px;
+@mixin responsividade($breakpoint) {
+    @if $breakpoint == medium {
+        @media (min-width: 600px) { @content; }
+    } @else if $breakpoint == large {
+        @media (min-width: 992px) { @content; }
+    } @else if $breakpoint == xlarge {
+        @media (min-width: 1200px) { @content; }
+    }
+}
+
+header {
+    background-color: $primary-color;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0 !important;
+    height: 80px;
+    
+    .navbar-collapse {
+        background-color: $primary-color-transparent;
+        backdrop-filter: blur(8px);
+        padding: 0 12px 15px;
+
+        form {
+            input {
+                border-radius: 10px;
+                border: none;
+            }
+            .btn {
+            border: solid 3px white;
+            border-radius: 10px;
+            color: white;
+            font-size: 20px;
+            }
+        }
+    }
+    
+    .container-fluid {
+        padding: 8px 0;
+        
+        @include responsividade(large) {
+            padding: 0 12px;
+            
+            .navbar-collapse {
+                background-color: transparent;
+                padding: 0;
+            }
+        }
+    }
 
 	img {
 		height: 60px;
+        padding: 10px;
 	}
 
 	.navbar-nav {
@@ -40,6 +91,7 @@ nav {
 
 			.nav-link {
 				transition: 0.3s ease-in-out;
+                font-weight: 500;
 
 				&.active {
 					font-weight: 600;
@@ -47,4 +99,8 @@ nav {
 			}
 		}
 	}
+
+    .navbar-toggler {
+        margin-right: 10px;
+    }
 }

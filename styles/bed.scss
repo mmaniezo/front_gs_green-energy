@@ -10,7 +10,7 @@ $white: whitesmoke;
     } @else if $breakpoint == tablet {
       @media (min-width: 890px) { @content; }
     } @else if $breakpoint == desktop {
-      @media (min-width: 1024px) { @content; }
+      @media (min-width: 1358px) { @content; }
     }
   }
 
@@ -19,6 +19,7 @@ $white: whitesmoke;
     justify-items: center;
     grid-template-columns: 1fr;
     gap: 50px;
+    margin: 45px 20px;
     @include responsive(tablet){
         grid-template-columns: 1fr 1fr;
     }
@@ -55,6 +56,9 @@ $white: whitesmoke;
             text-align: center;
             font-size: 28px;
         }
+    }
+    @include responsive(desktop){
+        width: 600px;
     }
 }
 
