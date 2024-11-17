@@ -1,0 +1,257 @@
+.text_carrosel {
+  text-align: center;
+  margin: 1rem;
+}
+.text_carrosel h2 {
+  font-size: 1.5rem;
+  color: #127f0b;
+}
+.text_carrosel p {
+  font-size: 1rem;
+  color: #666264;
+}
+@media (min-width: 1024px) {
+  .text_carrosel .h2 {
+    font-size: 1.8rem;
+  }
+  .text_carrosel p {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .text_carrosel {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    align-items: center;
+  }
+}
+
+.carrosel {
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+}
+.carrosel .carousel-inner {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.carrosel .carousel-inner img {
+  object-fit: cover;
+  height: 30vh;
+}
+@media (min-width: 590px) {
+  .carrosel .carousel-inner img {
+    height: 40vh;
+  }
+}
+@media (min-width: 780px) {
+  .carrosel .carousel-inner img {
+    height: 45vh;
+  }
+}
+@media (min-width: 1024px) {
+  .carrosel .carousel-inner img {
+    height: 50vh;
+  }
+}
+.carrosel .carousel-control-prev-icon,
+.carrosel .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+}
+
+.conheca_card h3 {
+  color: #127f0b;
+  font-size: 1.2rem;
+  margin: 1rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .conheca_card h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .conheca_card h3 {
+    font-size: 1.8rem;
+    margin: 2rem;
+  }
+}
+
+.container {
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+}
+
+.card {
+  border: solid 3px #666264;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-direction: column;
+  width: 14rem;
+  margin: 10px;
+  border-radius: 60px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  overflow: hidden;
+}
+
+.card img {
+  height: 150px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-body h5 {
+  text-align: center;
+  color: #006414;
+  font-size: 1rem;
+}
+
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5ccb5f;
+  color: #f5f5f5;
+  border: none;
+  padding: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 150px;
+  transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: #009929;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border-color: #009929;
+  background-color: #bcffbc;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .card {
+    width: 14rem;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    width: 18rem;
+  }
+}
+.modal-content {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: none;
+}
+
+.modal-header {
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn-close {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.btn-close:hover {
+  color: #000000;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+.modal-body span {
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 2rem;
+}
+.modal-body .bi-check-lg {
+  color: #006414;
+  font-size: 2rem;
+}
+.modal-body .bi-x {
+  color: #f10f0f;
+  font-size: 2rem;
+  padding-bottom: 0;
+  align-items: center;
+}
+
+.modal-body ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.modal-footer {
+  background-color: #f8f9fa;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+#modalEolica .modal-header {
+  background-color: #28a745;
+}
+
+#modalHidreletrica .modal-header {
+  background-color: #17a2b8;
+}
+
+#modaSolar .modal-header {
+  background-color: yellow;
+}
+
+#modaBiomassa .modal-header {
+  background-color: brown;
+}
+
+#modaGeotermica .modal-header {
+  background-color: blueviolet;
+}
+
+#modaMare .modal-header {
+  background-color: blue;
+}
+
+/*# sourceMappingURL=tipos_energia.css.map */
