@@ -8,10 +8,32 @@ $font: "Plus Jakarta Sans";
     font-family: $font;
 }
 
-nav {
+@mixin responsividade($breakpoint) {
+    @if $breakpoint == medium {
+        @media (min-width: 600px) { @content; }
+    } @else if $breakpoint == large {
+        @media (min-width: 992px) { @content; }
+    } @else if $breakpoint == xlarge {
+        @media (min-width: 1200px) { @content; }
+    }
+}
+
+.navbar {
 	background-color: $primary-color;
 	margin: 0;
+    padding: 0 !important;
 	height: 80px;
+    position: sticky;
+    top: 0;
+    
+    .container-fluid {
+        background-color: $primary-color;
+        padding: 8px 12px;
+
+        @include responsividade(large) {
+            padding: 0 12px;
+        }
+    }
 
 	img {
 		height: 60px;
