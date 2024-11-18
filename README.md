@@ -1,4 +1,4 @@
-<h1 align="center">GREEN ENERGY</h1>
+<h1 align="center">GREEN ENERGY 🌱</h1>
 
 <p align="center">
   <strong>Um projeto voltado para energias renováveis e sustentáveis.</strong>
