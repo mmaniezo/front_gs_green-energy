@@ -5,7 +5,7 @@ $font: "Plus Jakarta Sans";
 * {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
+	box-sizing: border-box !important;
     font-family: $font;
 }
 
@@ -23,7 +23,11 @@ header {
     background-color: $primary-color;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
+}
+
+.secoes {
+    scroll-margin-top: 90px;
 }
 
 .navbar {

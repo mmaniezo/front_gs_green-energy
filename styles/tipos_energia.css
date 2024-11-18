@@ -88,14 +88,14 @@
 }
 
 .card {
-  border: solid 3px #666264;
+  border: solid 2px #666264 !important;
   display: flex;
   justify-items: center;
   align-items: center;
   flex-direction: column;
   width: 14rem;
   margin: 10px;
-  border-radius: 60px;
+  border-radius: 24px !important;
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   overflow: hidden;
 }
@@ -156,7 +156,7 @@
 .modal-content {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
+  background-color: #fff !important;
   border: none;
 }
 
@@ -211,11 +211,11 @@
 }
 
 .modal-footer {
-  background-color: #f8f9fa;
   border-radius: 0 0 10px 10px;
   display: flex;
   justify-content: flex-end;
   padding: 1rem;
+  border: none !important;
 }
 
 .btn-secondary {

@@ -3,7 +3,7 @@
   justify-items: center;
   grid-template-columns: 1fr;
   gap: 50px;
-  margin: 45px 20px;
+  margin: 0 0 45px;
 }
 @media (min-width: 890px) {
   .bed {
@@ -16,15 +16,21 @@
   }
 }
 
+#title_beneficios_desafios {
+  font-weight: 650;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 45px;
+}
+
 .beneficios {
-  width: 364px;
+  width: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   border: solid 2px;
   border-radius: 30px;
   padding: 20px;
-  margin: 0 25px;
   font-size: 19px;
   background-color: #006414;
   color: whitesmoke;
@@ -58,14 +64,13 @@
 }
 
 .desafios {
-  width: 364px;
+  width: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   border: solid 2px;
   border-radius: 30px;
   padding: 20px;
-  margin: 0 25px;
   font-size: 19px;
   background-color: #640000;
   color: whitesmoke;
